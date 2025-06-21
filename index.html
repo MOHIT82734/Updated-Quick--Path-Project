@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quick Path</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+
+
+  <!-- 🧭 Header Navigation (Updated) -->
+  <header>
+
+    <nav class="navbar">
+      <div class="nav-brand">
+        <a href="#">
+          <img src="traffic-lights-6602_256.gif" alt="Quick Path gif" class="logo-img" />
+        </a>
+      </div>
+
+      <div class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        
+        <li><a href="signup.html">Sign Up</a></li>
+
+          <li ><a href="hyperlink.html">Demo</a></li>
+        
+        <li><a href="#about">About</a></li>
+        <li><a href="#tech">Technology</a></li>
+       
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+
+
+  <!-- 🌟 Hero Section with Video Background -->
+  <section class="hero-section">
+    <video autoplay muted loop class="bg-video">
+      <source src="sixth.mp4" type="video/mp4" />
+      Your browser does not support the video tag
+    </video>
+
+    <div class="hero-content">
+      <h1>Quick Path</h1>
+      <p>Smart Navigation System for Optimal Travel </p>
+
+      <li class="demon"><a href="hyperlink.html"> <h2> Demo </h2></a></li>
+    </div>
+  </section>
+
+
+
+  <!-- 📢 Marquee Section -->
+  <div class="marquee-text">
+    <marquee> 🚗 Quick Path – A Smart Navigation System for Optimal Travel | Powered by Dijkstra's Algorithm & Real-Time Traffic Data | It provides the Shortest path for the user📍
+    </marquee>
+  </div>
+
+
+
+  <!-- 🌄 Background Image Section -->
+  <div class="main-bg">
+    <div class="section-grid">
+      
+
+
+      <!-- 🏠 Home Section -->
+      <section id="home" class="section-box" data-aos="fade-up">
+        <h2><i class="fas fa-home"></i> Welcome to Quick Path</h2>
+        <ul>
+          <li>Smart Navigation System for Optimal Travel</li>
+          <li>Shortest path finder</li>
+        </ul>
+      </section>
+
+
+
+      <!-- 🔧 Technology Section -->
+      <section id="tech" class="section-box" data-aos="fade-up">
+        <h2><i class="fas fa-cogs"></i> Technology Stack</h2>
+        <ul>
+          <li>Python + NetworkX for Dijkstra's Algorithm</li>
+          <li>OpenStreetMap API for route rendering</li>
+        </ul>
+      </section>
+
+
+
+      <!-- 👥 About Section -->
+      <section id="about" class="section-box" data-aos="fade-up">
+        <h2><i class="fas fa-users"></i> About the Team</h2>
+        <p>We are "The Path Seekers", presenting a traffic management system that helps users find the shortest path.</p>
+      </section>
+
+
+
+      <!-- 🚀 Demo Section -->
+      <section id="demo" class="section-box demo-box" data-aos="fade-up">
+        <h2><i class="fas fa-map-marked-alt"></i> Live Demo</h2>
+        <p>(Coming Soon: Interactive Shortest Route Finder UI)</p>
+        <div class="demo-images">
+          <img src="fourth.jpeg" alt="Demo 1" />
+          <img src="third.jpeg" alt="Demo 2" />
+        </div>
+      </section>
+
+
+
+      <!-- 📧 Contact Section -->
+      <section id="contact" class="section-box" data-aos="fade-up">
+        <h2><i class="fas fa-envelope"></i> Contact Us</h2>
+        <p><strong>Mohit Singh</strong> – mb279404@gmail.com</p>
+        <p><strong>Gaurav Rawat</strong> – gauravrawat0259@gmail.com</p>
+        <p><strong>Piyush Arya</strong> – piyush.arya1104@gmail.com</p>
+        <p><strong>Madhav Ahuja</strong> – madhavahuja100@gmail.com</p>
+      </section>
+    </div>
+  </div>
+
+
+  <!-- 🔚 Footer Section -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p>© 2025 Quick Path Project</p>
+      <p>
+        Connect with us on LinkedIn:
+        <a href="https://www.linkedin.com/in/mohit-singh-7a7a61251/" target="_blank">Mohit</a> |
+        <a href="https://www.linkedin.com/in/gauravrawat007/" target="_blank">Gaurav</a> |
+        <a href="https://www.linkedin.com/in/madhav-ahuja100/" target="_blank">Madhav</a>
+      </p>
+    </div>
+  </footer>
+
+
+  <!-- 🔀 AOS Animation -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true });
+  </script>
+
+  <!-- 📱 Mobile Nav Toggle Script -->
+  <script>
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    navToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('nav-open');
+    });
+  </script>
+
+</body>
+</html>

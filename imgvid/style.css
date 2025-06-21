@@ -1,0 +1,369 @@
+/* 🔄 Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  scroll-behavior: smooth;
+  background-color: #0b0b0b;
+  color: #ffffff;
+}
+
+/* 🎥 Hero Video Section */
+.hero-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(50%);
+}
+
+.hero-content {
+  z-index: 1;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 30px 60px;
+  border-radius: 15px;
+  backdrop-filter: blur(4px);
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  color: #bb7cfa;
+}
+.demon
+{
+
+font-size: 1.3rem;
+
+}
+.hero-content p {
+  font-size: 1.5rem;
+
+  color: #ffffff;
+}
+
+/* 📌 Header Navigation */
+header {
+  background: #0b0b0b;
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #333;
+}
+
+/* For the logo image */
+
+
+
+.logo-img {
+  height: 60px; /* increased from 40px */
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  animation: fadeIn 1.5s ease-out forwards, pulse 2s ease-in-out infinite;
+  filter: drop-shadow(0 0 5px #c17def);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.logo-img:hover {
+  animation: spin 1.2s linear infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Navbar styling */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #000000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+/* Logo alignment */
+.nav-brand {
+  display: flex;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+nav h1 {
+  color: #ffffff;
+  font-size: 2.1rem;
+}
+
+/* 📱 Hamburger Button */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.nav-toggle span {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  transition: 0.3s ease;
+  border-radius: 2px;
+}
+
+/* 🧭 Nav Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.3rem;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.nav-links a::after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 0;
+  background: #ffffff;
+  transition: 0.3s ease;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* 📱 Mobile Nav Style */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #121212;
+    flex-direction: column;
+    align-items: center;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+    border-bottom: 1px solid #333;
+  }
+
+  .nav-links.open {
+    max-height: 300px;
+    padding: 15px 0;
+  }
+
+  .nav-links a {
+    padding: 12px 0;
+  }
+}
+
+/* 📢 Marquee / Announcement */
+.marquee-text {
+  background: #c17def;
+  color: #000000;
+  font-size: 25px;
+  padding: 12px 0;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 1px;
+  backdrop-filter: blur(4px);
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+}
+
+/* 🌄 Main Background after marquee */
+.main-bg {
+  background-image: url('T1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  background-attachment: fixed;
+}
+
+/* 📦 Grid for Sections */
+.section-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  padding: 60px 30px;
+  max-width: 1300px;
+  margin: auto;
+}
+
+/* 🧊 Section Box Style */
+.section-box {
+  background: #121212;
+  border: 1px solid #333;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(6px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 30px auto;
+}
+
+.section-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 40px #c17def;
+}
+
+.section-box h2 {
+  font-size: 1.9rem;
+  margin-bottom: 15px;
+  color: #c17def;
+}
+
+.section-box p,
+.section-box li {
+  font-size: 1.1rem;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+/* 🖼️ Demo Box (Bigger) */
+.section-box.demo-box {
+  max-width: 1200px;
+  padding: 50px;
+}
+
+/* 🖼️ Demo Images */
+.demo-images {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.demo-images img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.demo-images img:hover {
+  transform: scale(1.03);
+}
+
+/* 🔚 Footer */
+.footer {
+  background: #000;
+  color: #fff;
+  padding: 25px 15px;
+  text-align: center;
+  margin-top: 60px;
+  border-top: 1px solid #333;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+
+.footer-content p {
+  margin: 10px 0;
+}
+
+/* 🔗 Social Links */
+.social-links {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.social-links a {
+  text-decoration: none;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.social-links a.linkedin {
+  color: #0077b5;
+}
+
+.social-links a.instagram {
+  color: #c17def;
+}
+
+.social-links a.github {
+  color: #ffffff;
+}
+
+.social-links a:hover {
+  opacity: 0.8;
+}
+
+.social-links i {
+  font-size: 1.3rem;
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quick Path - Find the Shortest Path</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+        background:url("pexels-lina-mamone-661542-1472612.jpg");
+        background-size: cover;
+      background-color: #0b0b0b;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      padding: 20px;
+    }
+
+    .ride-container {
+      background: #121212;
+      padding: 40px 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+      width: 100%;
+      max-width: 500px;
+    }
+
+    .ride-container h2 {
+      text-align: center;
+      color: #c17def;
+      margin-bottom: 30px;
+      font-size: 2rem;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      background: #1e1e1e;
+      color: #fff;
+      font-size: 1rem;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 10px;
+      background-color: #c17def;
+      color: #0b0b0b;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 1.1rem;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #a055cf;
+    }
+
+    .note {
+      margin-top: 15px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <div class="ride-container">
+    <h2>Find the Shortest Path</h2>
+    <form action="#" method="POST">
+      <div class="form-group">
+        <label for="pickup">Your Current Location</label>
+        <input type="text" id="pickup" name="pickup" placeholder="Enter your location" required />
+      </div>
+      <div class="form-group">
+        <label for="drop">Destination</label>
+        <input type="text" id="drop" name="drop" placeholder="Enter destination" required />
+      </div>
+      <button type="submit">Find Path</button>
+    </form>
+    <p class="note">Quick Path helps you find the fastest route using smart algorithms.</p>
+  </div>
+</body>
+</html>
